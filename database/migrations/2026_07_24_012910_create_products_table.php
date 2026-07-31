@@ -11,7 +11,7 @@ public function up()
 {
 Schema::create('products', function (Blueprint $table) {
 $table->id();
-$table->string('name');
+$table->string('name', 50);
 $table->decimal('price', 10, 2);
 $table->text('description')->nullable();
 $table->integer('stock')->default(0);

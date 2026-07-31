@@ -10,10 +10,10 @@ return true;
 public function rules(): array
 {
 return [
-'name' => 'required|string|max:255',
-'price' => 'required|numeric',
+'name' => 'sometimes|required|string|max:70',
+'price' => 'sometimes|required|numeric',
 'description' => 'nullable|string',
-'stock' => 'required|integer|min:0',
+'stock' => 'sometimes|required|integer|min:0',
 ];
 }
 }
