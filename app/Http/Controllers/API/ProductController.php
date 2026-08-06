@@ -43,10 +43,12 @@ return response()->json([
 }
 public function destroy(Product $product)
 {
-$product->delete();
-return response()->json([
+    $product->delete();
+    return response()->json([
 'status' => true,
-'message' => 'Product deleted successfully',
+'message' => 'Product retrieved successfully',
+'data' => new ProductResource($product)
 ], Response::HTTP_OK);
+
 }
 }
