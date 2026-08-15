@@ -14,6 +14,7 @@ return [
 'price' => 'sometimes|required|numeric',
 'description' => 'nullable|string',
 'stock' => 'sometimes|required|integer|min:0',
+'id_kategori' => 'nullable|exists:kategoris,id',
 ];
 }
 }
